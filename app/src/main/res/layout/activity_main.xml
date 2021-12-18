@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity"
+    >
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/appBar"
+        android:background="@color/white"
+        android:minHeight="?attr/actionBarSize">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/toolbar"
+            android:background="@color/teal_200"
+
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/appBar"
+        android:background="@color/teal_200"
+        app:tabMode="fixed"
+        app:tabSelectedTextColor="@color/white"
+        app:tabTextColor="@color/white">
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/ang_2018"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="2018" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/ang_2019"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="2019" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/ang_2020"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="2020" />
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/pager"
+        android:layout_below="@id/tab_layout">
+    </androidx.viewpager.widget.ViewPager>
+
+</RelativeLayout>
